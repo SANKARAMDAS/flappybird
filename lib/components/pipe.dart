@@ -46,12 +46,12 @@ class Pipe extends SpriteComponent
     position.x -= groundScrollingSpeed * dt;
 
     //check if the bird has passed this pipe
-    if (!scored && position.x + size.x < gameRef.bird.position.x) {
+    if (!scored && position.x + size.x < gameRef.priority) {
       scored = true;
 
       //only increment for top pipes to avoid double counting
       if (isTopPipe) {
-        gameRef.incrementScore();
+        // gameRef.incrementScore();
       }
     }
 
